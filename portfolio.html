@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#linked account">linked accounts</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home">
+        <h1>WELCOME TO MY PORTFOLIO</h1>
+        <p>I'm Laksh Vyas, a web developer.</p>
+    </section>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <p>Hi, Everyone Myself laksh vyas , Iam pursuing B.TECH from Poornima institue of engineering and technology.Iam in second year with specialization artificial intelligence and data science.</p>
+    </section>
+
+    <section id="projects">
+        <h2>My Projects</h2>
+        <div class="project">
+            <h3>Project 1</h3>
+            <h4>calculator using python</h4>
+            <p>import tkinter<br>
+                from tkinter import *<br>
+                
+                
+                
+                root = Tk()<br>
+                root.title("calculator")<br>
+                root.geometry("570x600+100+200")<br>
+                root.resizable(True,True)<br>
+                root.configure(bg="#17161b")<br>
+                
+                
+                equation = ""<br>
+                
+                
+                def show(value):<br>
+                    global equation<br>
+                    equation +=value<br>
+                    label_result.config(text=equation)<br>
+                
+                def show(value):<br>
+                    global equation<br>
+                    equation += value<br>
+                    label_result.config(text=equation)<br>
+                
+                
+                
+                
+                def clear():<br>
+                    global equation<br>
+                    equation=""<br>
+                    label_result.config(text=equation)<br>
+                
+                
+                def calcluate():<br>
+                    global equation<br>
+                    try:<br>
+                        result = str(eval(equation))<br>
+                    except:<br>
+                        result = "Error"<br>
+                    finally:<br>
+                        equation = ""<br>
+                        label_result.config(text=result)<br>
+                
+                label_result = Label(root,width = 25 ,height = 2 ,text = "",font = ("arial",30))<br>
+                label_result.pack()<br>
+                
+                
+                
+                Button(root, text="C", width=5, height=1, font=("arial", 30, "bold"), bd=1, fg="#fff", bg="#3697f5", command=clear).place(x=10, y=100)<br>
+                Button(root, text="/", width=5, height=1, font=("arial", 30, "bold"), bd=1, fg="#fff", bg="#2a2d36", command=lambda: show("/")).place(x=150, y=100)<br>
+                Button(root, text="%", width=5, height=1, font=("arial", 30, "bold"), bd=1, fg="#fff", bg="#2a2d36", command=lambda: show("%")).place(x=290, y=100)<br>
+                Button(root, text="*", width=5, height=1, font=("arial", 30, "bold"), bd=1, fg="#fff", bg="#2a2d36", command=lambda: show("*")).place(x=430, y=100)<br>
+                # Button(root, text="*", width=5, height=1, font=("arial", 30, "bold"), bd=1, fg="#fff", bg="#2a2d36", command=lambda: show("*")).place(x=570, y=100)<br>
+                
+                Button(root, text="7", width=5, height=1, font=("arial", 30, "bold"), bd=1, fg="#fff", bg="#2a2d36", command=lambda: show("7")).place(x=10, y=200)<br>
+                Button(root, text="8", width=5, height=1, font=("arial", 30, "bold"), bd=1, fg="#fff", bg="#2a2d36", command=lambda: show("8")).place(x=150, y=200)<br>
+                Button(root, text="9", width=5, height=1, font=("arial", 30, "bold"), bd=1, fg="#fff", bg="#2a2d36", command=lambda: show("9")).place(x=290, y=200)<br>
+                Button(root, text="-", width=5, height=1, font=("arial", 30, "bold"), bd=1, fg="#fff", bg="#2a2d36", command=lambda: show("-")).place(x=430, y=200)<br>
+                
+                # Button(root, text="*", width=5, height=1, font=("arial", 30, "bold"), bd=1, fg="#fff", bg="#2a2d36", command=lambda: show("*")).place(x=570, y=100)<br>
+                
+                Button(root, text="4", width=5, height=1, font=("arial", 30, "bold"), bd=1, fg="#fff", bg="#2a2d36", command=lambda: show("4")).place(x=10, y=300)<br>
+                Button(root, text="5", width=5, height=1, font=("arial", 30, "bold"), bd=1, fg="#fff", bg="#2a2d36", command=lambda: show("5")).place(x=150, y=300)<br>
+                Button(root, text="6", width=5, height=1, font=("arial", 30, "bold"), bd=1, fg="#fff", bg="#2a2d36", command=lambda: show("6")).place(x=290, y=300)<br>
+                Button(root, text="+", width=5, height=1, font=("arial", 30, "bold"), bd=1, fg="#fff", bg="#2a2d36", command=lambda: show("+")).place(x=430, y=300)<br>
+                
+                Button(root, text="1", width=5, height=1, font=("arial", 30, "bold"), bd=1, fg="#fff", bg="#2a2d36", command=lambda: show("1")).place(x=10, y=400)<br>
+                Button(root, text="2", width=5, height=1, font=("arial", 30, "bold"), bd=1, fg="#fff", bg="#2a2d36", command=lambda: show("2")).place(x=150, y=400)<br>
+                Button(root, text="3", width=5, height=1, font=("arial", 30, "bold"), bd=1, fg="#fff", bg="#2a2d36", command=lambda: show("3")).place(x=290, y=400)<br>
+                Button(root, text="0", width=11, height=1, font=("arial", 30, "bold"), bd=1, fg="#fff", bg="#2a2d36", command=lambda: show("0")).place(x=10, y=500)<br>
+                
+                Button(root, text=".", width=5, height=1, font=("arial", 30, "bold"), bd=1, fg="#fff", bg="#2a2d36", command=lambda: show(".")).place(x=290, y=500)<br>
+                Button(root, text="=", width=5, height=3, font=("arial", 30, "bold"), bd=1, fg="#fff", bg="#fe9037", command=calcluate).place(x=430, y=400)<br>
+                
+                
+                
+                
+                root.bind("<Escape>",lambda e:root.quit())<br>
+                root.mainloop()<br>
+                </p><br>
+        </div>
+        <div class="project">
+            <h3>Project 2</h3>
+            <h4>description</h4>
+            <p>it is a weather applincation using python language and a map navigation also i this application</p>
+            <h4>weather application using pyhton</h4>
+            <h5>code of the project</h5>
+            <p>#IMPORTING MODULES<br>
+                import requests<br>
+                import tkinter as tk<br>
+                from tkinter import messagebox<br>
+                import webbrowser<br>
+                
+                
+                #MADE A DEF FUNCTION<br>
+                def get_weather(city_name, api_key):<br>
+                    """Get the current weather for a given city."""<br>
+                    base_url = "http://api.openweathermap.org/data/2.5/weather?"<br>
+                    complete_url = f"{base_url}q={city_name}&appid={api_key}&units=metric"<br>
+                    response = requests.get(complete_url)<br>
+                    data = response.json()<br>
+                #TRYING CONDITIONS<br>
+                    if data.get("cod") != "404":<br>
+                        main = data.get("main", {})<br>
+                        weather = data.get("weather", [{}])[0]<br>
+                        temp = main.get("temp")<br>
+                        pressure = main.get("pressure")<br>
+                        humidity = main.get("humidity")<br>
+                        weather_description = weather.get("description")<br>
+                        icon = weather.get("icon")<br>
+                
+                        weather_info = f"Temperature: {temp}°C\nPressure: {pressure} hPa\nHumidity: {humidity}%\nDescription: {weather_description}"<br>
+                        return weather_info, icon<br>
+                    else:<br>
+                        return f"City {city_name} not found.", None<br>
+                #AGAIN MAKE A DEF FUNCTION<br>
+                def show_weather():<br>
+                    """Show the current weather for the given city."""<br>
+                    city = city_name_entry.get()<br>
+                    weather_info, icon = get_weather(city, api_key)<br>
+                    if icon:<br>
+                        icon_url = f"http://openweathermap.org/img/wn/{icon}@2x.png"<br>
+                        icon_response = requests.get(icon_url)<br>
+                        icon_data = icon_response.content<br>
+                        icon_image = tk.PhotoImage(data=icon_data)<br>
+                        icon_label.config(image=icon_image)<br>
+                        icon_label.image = icon_image<br>
+                    messagebox.showinfo(f"Weather in {city}", weather_info)<br>
+                
+                def clear_entry():<br>
+                    """Clear the city name entry field."""<br>
+                    city_name_entry.delete(0, tk.END)<br>
+                
+                def exit_app():<br>
+                    """Exit the application."""<br>
+                    root.destroy()<br>
+                
+                def show_forecast():<br>
+                    """Show the 5-day forecast for the given city."""<br>
+                    city = city_name_entry.get()<br>
+                    forecast_url = f"http://api.openweathermap.org/data/2.5/forecast?q={city}&appid={api_key}&units=metric"<br>
+                    response = requests.get(forecast_url)<br>
+                    data = response.json()<br>
+                
+                    forecast_info = ""<br>
+                    for forecast in data.get("list", []):<br>
+                        forecast_info += f"Date: {forecast.get('dt_txt')}\nTemperature: {forecast.get('main', {}).get('temp')}°C\nPressure: {forecast.get('main', {}).get('pressure')} hPa\nHumidity: {forecast.get('main', {}).get('humidity')}%\nDescription: {forecast.get('weather', [{}])[0].get('description')}\n\n"<br>
+                
+                    messagebox.showinfo(f"5-Day Forecast for {city}", forecast_info)<br>
+                
+                def show_map():<br>
+                    """Show the map for the given city."""<br>
+                    city = city_name_entry.get()<br>
+                    map_url = f"https://www.google.com/maps/place/{city}"<br>
+                    webbrowser.open(map_url)<br>
+                
+                
+                
+                
+                # GUI Setup<br>
+                api_key = "79093f1f345cdf842136953249f6223f"  # Replace with your own API key<br>
+                
+                root = tk.Tk()<br>
+                root.title("Weather App")<br>
+                root.configure(bg="#34495e")  # Background color<br>
+                
+                # Main frame<br>
+                main_frame = tk.Frame(root, bg="#34495e")<br>
+                main_frame.pack(pady=20, padx=20)<br>
+                
+                # Label for city name entry<br>
+                city_name_label = tk.Label(main_frame, text="Enter City Name:", font=("Helvetica", 20, "bold"), bg="#34495e", fg="#ecf0f1")<br>
+                city_name_label.grid(row=0, column=0, padx=10, pady=10, sticky="w")<br>
+                
+                # Entry box for city name input<br>
+                city_name_entry = tk.Entry(main_frame, font=("Helvetica", 18), bg="#ecf0f1", fg="#34495e", bd=5, relief="ridge")<br>
+                city_name_entry.grid(row=0, column=1, padx=10, pady=10)<br>
+                
+                # Weather icon label<br>
+                icon_label = tk.Label(main_frame, bg="#34495e")<br>
+                icon_label.grid(row=1, column=1, padx=10, pady=10)<br>
+                
+                # Button to check weather<br>
+                check_weather_button = tk.Button(main_frame, text="Check Weather", command=show_weather, font=("Helvetica", 20, "bold"), bg="#1abc9c", fg="white", activebackground="#16a085", activeforeground="white")<br>
+                check_weather_button.grid(row=2, column=0, padx=10, pady=10)<br>
+                
+                # Button to show forecast<br>
+                forecast_button = tk.Button(main_frame, text="5-Day Forecast", command=show_forecast, font=("Helvetica", 18), bg="#f39c12", fg="white", activebackground="#f7dc6f", activeforeground="white")<br>
+                forecast_button.grid(row=2, column=1, padx=10, pady=10)<br>
+                
+                # Button to show map<br>
+                map_button = tk.Button(main_frame, text="Show Map", command=show_map, font=("Helvetica", 18), bg="#3498db", fg="white", activebackground="#2980b9", activeforeground="white")<br>
+                map_button.grid(row=3, column=0, padx=10, pady=10)<br>
+                
+                # Button to clear entry<br>
+                clear_button = tk.Button(main_frame, text="Clear", command=clear_entry, font=("Helvetica", 18), bg="#e74c3c", fg="white", activebackground="#c0392b", activeforeground="white")<br>
+                clear_button.grid(row=3, column=1, padx=10, pady=10)<br>
+                
+                # Button to exit the application<br>
+                exit_button = tk.Button(main_frame, text="Exit", command=exit_app, font=("Helvetica", 18), bg="#2c3e50", fg="white", activebackground="#34495e", activeforeground="white")<br>
+                exit_button.grid(row=4, column=0, columnspan=2, padx=10, pady=10)<br>
+                root.mainloop()<br>
+                </p>
+        </div>
+        <!-- Add more projects as needed -->
+    </section>
+
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <form id="contact-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+
+            <button type="submit">Send</button>
+        <section id="account linked">
+            <h2>linked account</h2>
+            <form id="linked account-form">
+                <label for="github"github:></label>
+                <a href="https://github.com/">github</a><br>
+                <a href="https://www.linkedin.com/feed/?linkOrigin=LI_BADGE&shareActive=true&shareUrl=https%3A%2F%2Fverify.mygreatlearning.com%2Fverify%2FQEFABGRJ">linkedin</a>
+        </section>
+        </form>
+        <p id="form-status"></p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 [Your Name]. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
